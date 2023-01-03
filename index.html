@@ -1,25 +1,27 @@
-<!DOCTYPE html>
+
 <html>
-  <head>
-    <title>This Mission Drift</title>
-    <style>
+
+<style>
+  h1 {
+      margin-left: 2%;
+        font-family: Arial;
+        font-size: 72px;
+    }
+
+    h2 {
+      font-family: Arial;
+      font-size: 20px;
+      margin-left: 5%;
+    }
     p {
       margin-left: 5%;
       margin-right: 10%;
         font-family: Arial;
         font-size: 12px;
     }
-    h1 {
-      margin-left: 2%;
-        font-family: Arial;
-        font-size: 72px;
-    }
-    h2 {
-      margin-left: 5%;
-        font-family: Arial;
-        font-size: 18px;
-    }
-      select {
+
+    select {
+      /* overflow: hidden; */
         font-family: Arial;
         font-size: 12px;
         font-weight: bold;
@@ -27,137 +29,400 @@
         -webkit-appearance: none;
         -moz-appearance: none;
         appearance: none;
+        padding: none;
+        border: none;
+        width: 0px;
+       cursor: pointer;
       }
-    </style>
-  </head>
+      select::-ms-expand {
+  display: none;
+}
+    select:hover {
+      color: blue;
+    }
+    .helper-element {
+      display:block;
+    }
+    a:hover {
+      color:blue;
+    }
+    a:visited {
+      color: blue;
+    }
+</style>
 
-  <body>
-<h1>This Mission Drift</h1>
- <h2><a href="https://www.oberlin.edu/about-oberlin/mission-and-values">Oberlin College Mission</a></h2>
-<p>
-    Oberlin College, 
-   <select>
-    <option selected>an</option>
-      <option>a</option>
-    </select>
+<h1>This<br>Mission<br>Drift</h1>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <select>
-      <option selected>independent</option>
-        <option>private</option>
-        <option>non-profit</option>
-        <option>for-profit</option>
-        <option>military</option>
-        <option>religious</option>
-        <option>small</option>
-        <option>large</option>
-        <option>online</option>
-        <option>municipal</option>
-        <option>state</option>
-        <option>local</option>
-        <option>national</option>
-        <option>corporate</option>
-        <option>[BLANK]</option>
-    </select>
-    <select>
-        <option selected>coeducational</option>
-          <option>men's</option>
-          <option>women's</option>
-          <option>trans</option>
-          <option>two-spirit</option>
-          <option>[BLANK]</option>
-  </select>
-    institution, holds a distinguished place among American colleges and universities. Oberlin was the first college to grant undergraduate degrees to 
-  <select>
-    <option selected>women</option>
-      <option>men</option>
-      <option>trans people</option>
-      <option>openly homosexual people</option>
-      <option>children</option>
-      <option>centenarians</option>
-      <option>Jewish people</option>
-      <option>Indigenous American people</option>
-      <option>African/African American people</option>
-      <option>Latinx people</option>
-      <option>Indian/Indo-Carribean people</option>
-      <option>Asian people</option>
-      <option>White/European people</option>
-      <option>Polynesian people</option>
-      <option>Middle Eastern/North African people</option>
-      <option>people with disability</option>
-      <option>openly socialist people</option>
-      <option>houseless people</option>
-      <option>[BLANK]</option>
-  </select>
-    in a
-    <select>
-      <option selected>coeducational</option>
-        <option>men's</option>
-        <option>women's</option>
-        <option>trans</option>
-        <option>two-spirit</option>
-        <option>[BLANK]</option>
-</select>
-program and, historically, was a leader in the education of African Americans. The Oberlin community is known for its 
-<select><option selected>academic and musical</option>
-        <option>social and cultural</option>
-        <option>art and design</option>
-        <option>art</option>
-        <option>literary</option>
-        <option>theatre and dance</option>
-        <option>activist</option>
-        <option>political and social</option>
-        <option>service and philanthropic</option>
-        <option>business and economic</option>
-        <option>progressive educational</option>
-        <option>conservative</option>
-        <option>religious</option>
-        <option>military</option>
-        <option>agricultural</option>
-        <option>socialist</option>
-        <option>vocational</option>
-        <option>[BLANK]</option>
-</select>
-        <select>
-          <option selected>excellence</option>
-            <option>mediocrity</option>
-            <option>supremacy</option>
-            <option>inferiority</option>
-            <option>neutrality</option>
-            <option>edge</option>
-            <option>virtue</option>
-          </select>
-          
-          <select>
-            <option selected>social engagement</option>
-              <option>making money</option>
-              <option>feeding the food insecure</option>
-              <option>housing the housing insecure</option>
-              <option>supporting people with mental illness</option>
-              <option>teaching people to read</option>
-              <option>developing politically conservative leaders</option>
-              <option>promoting civil rights</option>
-              <option>social service</option>
-              <option>sales</option>
-              <option>the educational industrial complex</option>
-            </select>
-             and 
-             <select>
-              <option selected>diversity</option>
-                <option>eurocentrism</option>
-                <option>indigeneity</option>
-                <option>homogeneity</option>
-                <option>Afrocentricsm</option>
-                <option>Latin centricty</option>
-                <option>Asiancentrism</option>
-                <option>feminism</option>
-                <option>misogyny</option>
-                <option>misogynoir</option>
-                <option>capitalism</option>
-              </select>
+  <h2><a href="https://www.oberlin.edu/about-oberlin/mission-and-values" target="_blank">Oberlin College</a></h2>
+  <p>
+ Oberlin  College, 
+
+ <select id="resizing_select" class='dropdown'>
+  <option = selected>misogynoir</option>
+  <option>a</option>
+  <select id="resizing_select" class='dropdown'>
+  <span class="helper-element" aria-hidden="true" style='display:none;'></span>
+
+  <select id="resizing_select" class='dropdown'>
+  <option = selected>independent</option>
+  <option>a</option>
+  <option>private</option>
+  <option>non-profit</option>
+  <option>for-profit</option>
+  <option>military</option>
+  <option>religious</option>
+  <option>small</option>
+  <option>large</option>
+  <option>small</option>
+  <option>online</option>
+  <option>municipal</option>
+  <option>state</option>
+  <option>local</option>
+  <option>national</option>
+  <option>corporate</option>
+  <option>[BLANK]</option>
+  <select id="resizing_select" class='dropdown'>
+  <span class="helper-element" aria-hidden="true" style='display:none;'></span>
+
+  <select id="resizing_select" class='dropdown'>
+  <option = selected>coeducational</option>
+  <option>men’s</option>
+  <option>women’s</option>
+  <option>trans</option>
+  <option>two-spirit</option>
+  <option>[BLANK]</option>
+  <select id="resizing_select" class='dropdown'>
+  <span class="helper-element" aria-hidden="true" style='display:none;'></span>
+  
+institution, holds a distinguished place among American colleges and universities. Oberlin was the first college to grant undergraduate degrees to 
+
+<select id="resizing_select" class='dropdown'>
+  <option = selected>women</option>
+  <option>men</option>
+  <option>trans people</option>
+  <option>openly homosexual people</option>
+  <option>children</option>
+  <option>centenarians</option>
+  <option>Jewish people</option>
+  <option>Indigenous American people</option>
+  <option>African/African American people</option>
+  <option>Latinx people</option>
+  <option>Indian/Indo-Carribean people</option>
+  <option>Asian people</option>
+  <option>White/European people</option>
+  <option>Polynesian people</option>
+  <option>Middle Eastern people</option>
+  <option>North African people</option>
+  <option>people with a disability</option>
+  <option>openly socialist people</option>
+  <option>houseless people</option>
+  <option>[BLANK]</option>
+  <select id="resizing_select" class='dropdown'>
+  <span class="helper-element" aria-hidden="true" style='display:none;'></span>
+in a 
+
+  <select id="resizing_select" class='dropdown'>
+    <option = selected>coeducational</option>
+    <option>men’s</option>
+    <option>women’s</option>
+    <option>trans</option>
+    <option>two-spirit</option>
+    <option>[BLANK]</option>
+    <select id="resizing_select" class='dropdown'>
+    <span class="helper-element" aria-hidden="true" style='display:none;'></span>
+ 
+program and, historically, was a leader in the education of African Americans. The Oberlin community is known for impacts
+
+  <select id="resizing_select" class='dropdown'>
+    <option = selected>academic and musical</option>
+    <option>social and cultural</option>
+    <option>art and design</option>
+    <option>art</option>
+    <option>literary</option>
+    <option>theatre and dance</option>
+    <option>activist</option>
+    <option>political and social</option>
+    <option>service and philanthropic</option>
+    <option>business and economic</option>
+    <option>progressive educational</option>
+    <option>conservative</option>
+    <option>religious</option>
+    <option>military</option>
+    <option>agricultural</option>
+    <option>socialist</option>
+    <option>vocational</option>
+    <option>[BLANK]</option>
+    <select id="resizing_select" class='dropdown'>
+    <span class="helper-element" aria-hidden="true" style='display:none;'></span>
+    
+    <select id="resizing_select" class='dropdown'>
+      <option = selected>excellence</option>
+      <option>mediocrity</option>
+      <option>supremacy</option>
+      <option>inferiority</option>
+      <option>neutrality</option>
+      <option>edge</option>
+      <option>virtue</option>
+      <select id="resizing_select" class='dropdown'>
+      <span class="helper-element" aria-hidden="true" style='display:none;'></span>
+
+and its commitment to 
+
+<select id="resizing_select" class='dropdown'>
+  <option = selected>social engagement</option>
+  <option>making money</option>
+  <option>feeding the food insecure</option>
+  <option>housing the housing insecure</option>
+  <option>supporting people with mental illness</option>
+  <option>teaching people to read</option>
+  <option>developing politically conservative leaders</option>
+  <option>promoting civil rights</option>
+  <option>social service</option>
+  <option>sales</option>
+  <option>the educational industrial complex </option>
+  <select id="resizing_select" class='dropdown'>
+  <span class="helper-element" aria-hidden="true" style='display:none;'></span>
+  
+and
+
+<select id="resizing_select" class='dropdown'>
+  <option = selected>diversity</option>
+  <option>eurocentrism</option>
+  <option>indigeneity</option>
+  <option>homogeneity</option>
+  <option>Afrocentricism</option>
+  <option>Latin centricity</option>
+  <option>Asiancentrism</option>
+  <option>feminism</option>
+  <option>misogyny</option>
+  <option>misogynoir</option>
+  <option>capitalism,</option>
+  <select id="resizing_select" class='dropdown'>
+  <span class="helper-element" aria-hidden="true" style='display:none;'></span>
+.
 </p>
-  </body>
+
+<h2><a href="https://achieve.lausd.net/strategies#:~:text=Embracing%20our%20diversity%20to%20educat,We%20are%20L.A.%20Unified.&text=L.A.%20Unified%20will%20be%20a,students%20graduate%20ready%20for%20success." target="_blank">Los Angeles Unified School District Mission, Vision, and Core Values</a></h2>
+  <p>
+ Embracing our
+ 
+ <select id="resizing_select" class='dropdown'>
+  <option = selected>diversity</option>
+  <option>commonality</option>
+  <option>differences</option>
+  <option>relationship to the patriarchy</option>
+  <option>responsibility</option>
+  <option>requirement</option>
+  <option>charitable responsibility</option>
+  <option>historic commitment</option>
+  <option>disenfranchisement</option>
+  <option>cynicism</option>
+  <option>pessimism</option>
+  <option>pacifism</option>
+  <option>hunger</option>
+  <option>ill will</option>
+  <option>fear</option>
+  <option>egocentrism</option>
+  <option>racism</option>
+  <option>religious conviction,</option>
+  <select id="resizing_select" class='dropdown'>
+  <span class="helper-element" aria-hidden="true" style='display:none;'></span>
+  
+to educate L.A.'s
+
+<select id="resizing_select" class='dropdown'>
+  <option = selected>youth</option>
+  <option>children</option>
+  <option>minors</option>
+  <option>citizens</option>
+  <option>residents</option>
+  <option>uneducated</option>
+  <option>illiterate</option>
+  <option>most challenged populations</option>
+  <option>Black youth</option>
+  <option>Latinx youth</option>
+  <option>White youth</option>
+  <option>Asian youth</option>
+  <option>graffiti writers</option>
+  <option>citizens</option>
+  <option>undocumented citizens</option>
+  <option>unhoused citizens</option>
+  <option>unhoused</option>
+  <option>hungry</option>
+  <option>ill</option>
+  <option>Indigenous youth</option>
+  <option>Tongva</option>
+  <option>Fernandeño</option>
+  <option>Barrio Van Nuys Stoners</option>
+  <option>Piru Bloods</option>
+  <option>Canoga Park Alabama boys</option>
+  <option>Pacas</option>
+  <option>Judas Trece</option>
+  <option>Pacoima Paxton Street Locos</option>
+  <option>Flipside Trece</option>
+  <option>Reseda Trece</option>
+  <option>Asian Boyz</option>
+  <option>Black P. Stones</option>
+  <option>Vario San Fer</option>
+  <option>school boys</option>
+  <select id="resizing_select" class='dropdown'>
+  <span class="helper-element" aria-hidden="true" style='display:none;'></span>
+  ensure 
+
+<select id="resizing_select" class='dropdown'>
+  <option = selected>academic</option>
+  <option>economic</option>
+  <option>athletic</option>
+  <option>creative</option>
+  <option>literary</option>
+  <option>environmental</option>
+  <option>social</option>
+  <option>real estate</option>
+  <option>defense</option>
+  <option>gender</option>
+  <select id="resizing_select" class='dropdown'>
+  <span class="helper-element" aria-hidden="true" style='display:none;'></span>
+  
+  <select id="resizing_select" class='dropdown'>
+  <option = selected>achievement</option>
+  <option>justice</option>
+  <option>mediocrity</option>
+  <option>failure</option>
+  <option>prowess</option>
+  <option>triumph</option>
+  <option>dysfunction</option>
+  <option>collapse</option>
+  <option>inferiority</option>
+  <option>insolvency,</option>
+  <select id="resizing_select" class='dropdown'>
+  <span class="helper-element" aria-hidden="true" style='display:none;'></span>
+  
+  
+
+and
+
+<select id="resizing_select" class='dropdown'>
+  <option = selected>empower</option>
+  <option>condition</option>
+  <option>train</option>
+  <option>degrade</option>
+  <option>cultivate</option>
+  <option>champion</option>
+  <option>elevate</option>
+  <option>protect</option>
+  <option>nourish</option>
+  <option>serve</option>
+  <option>feed</option>
+  <select id="resizing_select" class='dropdown'>
+  <span class="helper-element" aria-hidden="true" style='display:none;'></span>
+  
+  <select id="resizing_select" class='dropdown'>
+  <option = selected>tomorrow's</option>
+  <option>today’s</option>
+  <option>all</option>
+  <option>yesterday’s</option>
+  <option>next generation’s</option>
+  <select id="resizing_select" class='dropdown'>
+  <span class="helper-element" aria-hidden="true" style='display:none;'></span>
+  
+  <select id="resizing_select" class='dropdown'>
+  <option = selected>leaders</option>
+  <option>citizens</option>
+  <option>workers</option>
+  <option>immigrants</option>
+  <option>undocumented citizens</option>
+  <option>trans people</option>
+  <option>gangsters</option>
+  <option>straight white men</option>
+  <option>Black men</option>
+  <option>Black women</option>
+  <option>Indigenous people</option>
+  <option>Latinx people</option>
+  <option>Tongva</option>
+  <option>Fernandeño</option>
+  <option>Barrio Van Nuys Stoners</option>
+  <option>Piru Bloods</option>
+  <option>Canoga Park Alabama boys</option>
+  <option>Pacas</option>
+  <option>Judas Trece</option>
+  <option>Pacoima Paxton Street Locos</option>
+  <option>Flipside Trece</option>
+  <option>Reseda Trece</option>
+  <option>Asian Boyz</option>
+  <option>Black P. Stones</option>
+  <option>Vario San Fer</option>
+  <option>school boys</option>
+  <select id="resizing_select" class='dropdown'>
+  <span class="helper-element" aria-hidden="true" style='display:none;'></span>
+. We are L.A. Unified.
+ </p>
+
+<p>
+  Words have power. Words are context-dependent, and they can gain or lose energy in different orientations. Institutional missions, commitments, and values are foundational to the work engaged. Language’s impacts on its consequences are fluid and contingent, whether as a core ethic that drives institutional structure, as a way to hustle support, or to advance unintentional or clandestine agenda related to other institutions, systems of belief, or systemic forms of bias, etc.
+  This living, nonlinear reference space offers access to alternative perspectives, positions, and projections that shift as users operate it.  
+</p>
 </html>
-<!--
-  Dynamic dropdown width using JavaScript >>
-  https://jonasfaehrmann.com/writing/post/2020-04-02-html-lessselectgreater-with-dynamic-size/
--->
+
+<script>
+/*----- Define 'on change' function -----*/
+$(".dropdown").change(function () {
+
+/*----- Assign selected value to its helper -----*/
+  $(this).next('.helper-element').html($(this).children('option:selected').val());
+
+/*----- Get width of helper and assign it to select box ------*/
+  var caretWidth;
+  if ($(this).next('.helper-element').width() < 15) caretWidth = 1;
+  else if ($(this).next('.helper-element').width() < 50) caretWidth = 5;
+else if ($(this).next('.helper-element').width() < 70) caretWidth = 8;
+else if ($(this).next('.helper-element').width() < 100) caretWidth = 10;
+else if ($(this).next('.helper-element').width() < 120) caretWidth = 11;
+ else if ($(this).next('.helper-element').width() < 125) caretWidth = 12;
+ else if ($(this).next('.helper-element').width() < 130) caretWidth = 13;
+ else if ($(this).next('.helper-element').width() < 135) caretWidth = 13;
+ else if ($(this).next('.helper-element').width() < 140) caretWidth = 15;
+ else if ($(this).next('.helper-element').width() < 145) caretWidth = 16;
+ else if ($(this).next('.helper-element').width() < 150) caretWidth = 17;
+ else if ($(this).next('.helper-element').width() < 155) caretWidth = 18;
+ else if ($(this).next('.helper-element').width() < 225) caretWidth = 24;
+
+
+  $(this).css('width', ($(this).next('.helper-element').width() + caretWidth) + 'px');
+
+});
+
+/*----- On document load, do it for all selects ------*/
+$(document).ready(function(){
+/*------ Get all dropdowns into a variable on page load -----*/
+var dropdowns = $('.dropdown');
+
+/*----- If there is one or more dropdown(s), loop over them */
+if(dropdowns.length > 0){
+$.each(dropdowns, function(i, item){
+ 
+ /*----- Do the same trick in here ------*/
+ $(item).next('.helper-element').html($(item).children('option:selected').val());
+ 
+ var caretWidth;
+ if ($(item).next('.helper-element').width() < 15) caretWidth = 1;
+  else if ($(item).next('.helper-element').width() < 50) caretWidth = 5;
+else if ($(item).next('.helper-element').width() < 70) caretWidth = 8;
+else if ($(item).next('.helper-element').width() < 100) caretWidth = 10;
+else if ($(item).next('.helper-element').width() < 120) caretWidth = 11;
+ else if ($(item).next('.helper-element').width() < 125) caretWidth = 12;
+ else if ($(item).next('.helper-element').width() < 130) caretWidth = 13;
+ else if ($(item).next('.helper-element').width() < 135) caretWidth = 13;
+ else if ($(item).next('.helper-element').width() < 140) caretWidth = 15;
+ else if ($(item).next('.helper-element').width() < 145) caretWidth = 16;
+ else if ($(item).next('.helper-element').width() < 150) caretWidth = 17;
+ else if ($(item).next('.helper-element').width() < 155) caretWidth = 18;
+ else if ($(item).next('.helper-element').width() < 225) caretWidth = 24;
+
+
+ $(item).css('width', ($(item).next('.helper-element').width() + caretWidth) + 'px');
+ 
+});
+}  
+});
+  </script>

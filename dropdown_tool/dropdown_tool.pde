@@ -7,7 +7,7 @@ import java.io.IOException;
 String pastedText;
 
 void setup() {
-   size(1000, 200);
+   size(500, 200);
    textSize(15);
    pastedText = "";
   

@@ -34,22 +34,21 @@
         border: none;
         width: 0px;
        cursor: pointer;
+       display: relative;
       }
       select::-ms-expand {
-  display: none;
+  display: block;
 }
-    select:hover {
-      color: blue;
-    }
-    .helper-element {
-      display:block;
-    }
+
     a:hover {
       color:blue;
     }
     a:visited {
       color: blue;
     }
+.dropdown:hover {
+  display:inline-block;
+}
 </style>
 
 <h1>This<br>Mission<br>Drift</h1>
@@ -613,7 +612,7 @@
     <option>mediocre</option>
     <option>overpopulated</option>
     <option>outdated</option>
-    <option>[BLANK</option>
+    <option>&nbsp</option>
     <select id="resizing_select" class='dropdown'>
     <span class="helper-element" aria-hidden="true" style='display:none;'></span>
   schools,
@@ -1644,6 +1643,10 @@
 </html>
 
 <script>
+  $(".dropdown").hover(function () {
+  simulate($(this).next('.dropdown'),"click");
+  })
+
 /*----- Define 'on change' function -----*/
 $(".dropdown").change(function () {
 
@@ -1799,4 +1802,6 @@ $.each(dropdowns, function(i, item){
 });
 }  
 });
+
+
   </script>

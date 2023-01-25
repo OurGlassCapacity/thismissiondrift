@@ -1999,10 +1999,7 @@ Greenpeace stands for
 </html>
 
 <script>
-var caretWidth;
 
-
-caretWidth=1;
 
   $(".dropdown").hover(function () {
   simulate($(this).next('.dropdown'),"click");
@@ -2010,7 +2007,72 @@ caretWidth=1;
 
 /*----- Define 'on change' function -----*/
 $(".dropdown").change(function () {
+var caretWidth;
+if(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  if ($(this).next('.helper-element').width() < 15) caretWidth = 1;
+      else if ($(this).next('.helper-element').width() < 20) caretWidth = 2;
+      else if ($(this).next('.helper-element').width() < 25) caretWidth = 3;
 
+      else if ($(this).next('.helper-element').width() < 35) caretWidth = 4;
+
+      else if ($(this).next('.helper-element').width() < 40) caretWidth = 5;
+      else if ($(this).next('.helper-element').width() < 45) caretWidth = 5;
+      else if ($(this).next('.helper-element').width() < 49) caretWidth = 6; //inferiority
+      else if ($(this).next('.helper-element').width() < 50) caretWidth = 6; //non-profit,    
+
+      else if ($(this).next('.helper-element').width() < 60) caretWidth = 6;
+      else if ($(this).next('.helper-element').width() < 65) caretWidth = 6; //collaboration
+      else if ($(this).next('.helper-element').width() < 70) caretWidth = 6; //trans people
+      else if ($(this).next('.helper-element').width() < 73) caretWidth = 7; //social service
+      else if ($(this).next('.helper-element').width() < 75) caretWidth = 7; //coeducational 
+      else if ($(this).next('.helper-element').width() < 80) caretWidth = 8; //Latin centricity
+      else if ($(this).next('.helper-element').width() < 85) caretWidth = 8; 
+
+      else if ($(this).next('.helper-element').width() < 90) caretWidth = 8; 
+      else if ($(this).next('.helper-element').width() < 95) caretWidth = 9; //social and cultural, socially beneficial
+      else if ($(this).next('.helper-element').width() < 98) caretWidth = 10; //socially productive
+
+
+      else if ($(this).next('.helper-element').width() < 100) caretWidth = 10;
+      else if ($(this).next('.helper-element').width() < 105) caretWidth = 10;
+
+      else if ($(this).next('.helper-element').width() < 110) caretWidth = 13; //promoting civil righrts
+      else if ($(this).next('.helper-element').width() < 120) caretWidth = 11;
+      else if ($(this).next('.helper-element').width() < 125) caretWidth = 11; //business and economic
+      else if ($(this).next('.helper-element').width() < 130) caretWidth = 11;
+      else if ($(this).next('.helper-element').width() < 135) caretWidth = 11;
+      else if ($(this).next('.helper-element').width() < 140) caretWidth = 11;
+      else if ($(this).next('.helper-element').width() < 145) caretWidth = 11; //health and medical services
+      else if ($(this).next('.helper-element').width() < 150) caretWidth = 12;
+      else if ($(this).next('.helper-element').width() < 155) caretWidth = 13;
+      else if ($(this).next('.helper-element').width() < 160) caretWidth = 13;
+
+      else if ($(this).next('.helper-element').width() < 190) caretWidth = 17; //hardship
+      else if ($(this).next('.helper-element').width() < 195) caretWidth = 17;
+      else if ($(this).next('.helper-element').width() < 230) caretWidth = 22;
+      else if ($(this).next('.helper-element').width() < 235) caretWidth = 22;
+
+      else if ($(this).next('.helper-element').width() < 325) caretWidth = 25; //unmet educational need
+      else if ($(this).next('.helper-element').width() < 330) caretWidth = 25;
+
+      else if ($(this).next('.helper-element').width() < 350) caretWidth = 28; //become sensitive
+      else if ($(this).next('.helper-element').width() < 350) caretWidth = 30; 
+
+      else if ($(this).next('.helper-element').width() < 355) caretWidth = 32; //to jump
+      else if ($(this).next('.helper-element').width() < 360) caretWidth = 32;
+      else if ($(this).next('.helper-element').width() < 395) caretWidth = 35;
+      else if ($(this).next('.helper-element').width() < 400) caretWidth = 37;
+
+      else if ($(this).next('.helper-element').width() < 520) caretWidth = 49;
+      else if ($(this).next('.helper-element').width() < 525) caretWidth = 49;
+
+      else if ($(this).next('.helper-element').width() < 645) caretWidth = 57; //negotiate
+      else if ($(this).next('.helper-element').width() < 650) caretWidth = 57;
+      else if ($(this).next('.helper-element').width() < 680) caretWidth = 65;
+      else if ($(this).next('.helper-element').width() < 695) caretWidth = 65;
+} else { 
+  caretWidth=1;
+}
 /*----- Assign selected value to its helper -----*/
   $(this).next('.helper-element').html($(this).children('option:selected').val());
 
@@ -2043,8 +2105,58 @@ $.each(dropdowns, function(i, item){
 
  if(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
   $(item).css('fontSize','26px');
-  
-    caretWidth=10;      
+  if ($(item).next('.helper-element').width() < 15) caretWidth = 1;
+    else if ($(item).next('.helper-element').width() < 20) caretWidth = 2;
+    else if ($(item).next('.helper-element').width() < 25) caretWidth = 3;
+
+    else if ($(item).next('.helper-element').width() < 35) caretWidth = 4;
+
+    else if ($(item).next('.helper-element').width() < 40) caretWidth = 5;
+    else if ($(item).next('.helper-element').width() < 45) caretWidth = 5;
+    else if ($(item).next('.helper-element').width() < 49) caretWidth = 6; //inferiority
+    else if ($(item).next('.helper-element').width() < 50) caretWidth = 6; //non-profit,    
+
+    else if ($(item).next('.helper-element').width() < 60) caretWidth = 6;
+    else if ($(item).next('.helper-element').width() < 65) caretWidth = 6; //collaboration
+    else if ($(item).next('.helper-element').width() < 70) caretWidth = 6; //trans people
+    else if ($(item).next('.helper-element').width() < 73) caretWidth = 7; //social service
+    else if ($(item).next('.helper-element').width() < 75) caretWidth = 7; //coeducational 
+    else if ($(item).next('.helper-element').width() < 80) caretWidth = 8; //Latin centricity
+    else if ($(item).next('.helper-element').width() < 85) caretWidth = 8; 
+
+    else if ($(item).next('.helper-element').width() < 90) caretWidth = 8; 
+    else if ($(item).next('.helper-element').width() < 95) caretWidth = 9; //social and cultural, socially beneficial
+    else if ($(item).next('.helper-element').width() < 98) caretWidth = 10; //socially productive
+
+
+    else if ($(item).next('.helper-element').width() < 100) caretWidth = 10;
+    else if ($(item).next('.helper-element').width() < 105) caretWidth = 10;
+
+    else if ($(item).next('.helper-element').width() < 110) caretWidth = 13; //promoting civil righrts
+    else if ($(item).next('.helper-element').width() < 120) caretWidth = 11;
+    else if ($(item).next('.helper-element').width() < 125) caretWidth = 11; //business and economic
+    else if ($(item).next('.helper-element').width() < 130) caretWidth = 11;
+    else if ($(item).next('.helper-element').width() < 135) caretWidth = 11;
+    else if ($(item).next('.helper-element').width() < 140) caretWidth = 11;
+    else if ($(item).next('.helper-element').width() < 145) caretWidth = 11; //health and medical services
+    else if ($(item).next('.helper-element').width() < 150) caretWidth = 12;
+    else if ($(item).next('.helper-element').width() < 155) caretWidth = 13;
+    else if ($(item).next('.helper-element').width() < 160) caretWidth = 13;
+
+    else if ($(item).next('.helper-element').width() < 190) caretWidth = 17; //hardship
+    else if ($(item).next('.helper-element').width() < 195) caretWidth = 17;
+    else if ($(item).next('.helper-element').width() < 230) caretWidth = 22;
+    else if ($(item).next('.helper-element').width() < 235) caretWidth = 22;
+
+    else if ($(item).next('.helper-element').width() < 355) caretWidth = 32; //to jump
+    else if ($(item).next('.helper-element').width() < 360) caretWidth = 32;
+    else if ($(item).next('.helper-element').width() < 395) caretWidth = 35;
+    else if ($(item).next('.helper-element').width() < 400) caretWidth = 37;
+
+    else if ($(item).next('.helper-element').width() < 645) caretWidth = 57; //negotiate
+    else if ($(item).next('.helper-element').width() < 650) caretWidth = 57;
+    else if ($(item).next('.helper-element').width() < 680) caretWidth = 65;
+    else if ($(item).next('.helper-element').width() < 695) caretWidth = 65;    
    }
        else{
 caretWidth=1;

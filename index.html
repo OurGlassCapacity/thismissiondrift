@@ -31,8 +31,8 @@ select {
   font-size: 20px;
   color:blue;
   background-color:white;
-  /* -webkit-appearance: none; */
-  /* -moz-appearance: none; */
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
   padding: none;
   border: none;
@@ -2006,15 +2006,18 @@ caretWidth=1;
 $(".dropdown").change(function () {
   if(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
   $(this).css('fontSize','28px');
-  if ($(this).next('.helper-element').width() < 20) caretWidth = 11;
-  else if  ($(this).next('.helper-element').width() < 50) caretWidth = 9;
-  else if  ($(this).next('.helper-element').width() < 100) caretWidth = 7;
-  else if  ($(this).next('.helper-element').width() < 200) caretWidth = 6;
-  else if  ($(this).next('.helper-element').width() < 300) caretWidth = 5;    
-   }
-       else{
-caretWidth=1;
+
+//   if ($(this).next('.helper-element').width() < 20) caretWidth = 7;
+//   else if  ($(this).next('.helper-element').width() < 50) caretWidth = 9;
+//   else if  ($(this).next('.helper-element').width() < 100) caretWidth = 7;
+//   else if  ($(this).next('.helper-element').width() < 200) caretWidth = 6;
+//   else if  ($(this).next('.helper-element').width() < 300) caretWidth = 5;    
+//    }
+//        else{
+// caretWidth=1;
        }
+
+       caretWidth=1;
 /*----- Assign selected value to its helper -----*/
   $(this).next('.helper-element').html($(this).children('option:selected').val());
 
@@ -2048,7 +2051,7 @@ $.each(dropdowns, function(i, item){
  if(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
   $(item).css('fontSize','28px');
   
-    caretWidth=9;      
+    caretWidth=1;    
    }
        else{
 caretWidth=1;

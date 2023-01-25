@@ -27,6 +27,7 @@ p {
 
 select {
 /* overflow: hidden; */
+box-shadow: none;
   font-family: Arial;
   font-size: 20px;
   color:blue;
@@ -42,6 +43,7 @@ select {
 }
 
 select::-ms-expand {
+  box-shadow: none;
   display: block;
 }
 
@@ -2040,7 +2042,7 @@ $.each(dropdowns, function(i, item){
 
 
  if(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-  $(item).css('fontSize','28px');
+  $(item).css('fontSize','26px');
   
     caretWidth=10;      
    }

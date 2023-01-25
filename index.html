@@ -2001,9 +2001,6 @@ var caretWidth;
 
 
 caretWidth=1;
-      
-
-
 
   $(".dropdown").hover(function () {
   simulate($(this).next('.dropdown'),"click");
@@ -2024,15 +2021,15 @@ $(".dropdown").change(function () {
 /*----- On document load, do it for all selects ------*/
 $(document).ready(function(){
 
-//   if(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-//   var dropdown = document.querySelectorAll('.dropdown');
-//     dropdown.style.fontSize = "25px";
-//     dropdown.style.color = "pink";
-//     caretWidth=1;      
-//    }
-//        else{
-// caretWidth=1;
-//        }
+  if(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  var dropdown = document.querySelectorAll('.dropdown');
+    dropdown.style.fontSize = "25px";
+    dropdown.style.color = "pink";
+    caretWidth=1;      
+   }
+       else{
+caretWidth=1;
+       }
 
 caretWidth = 1;
 

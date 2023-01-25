@@ -2021,15 +2021,7 @@ $(".dropdown").change(function () {
 /*----- On document load, do it for all selects ------*/
 $(document).ready(function(){
 
-  if(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-  var dropdown = document.querySelectorAll('.dropdown');
-    dropdown.style.fontSize = "25px";
-    dropdown.style.color = "pink";
-    caretWidth=1;      
-   }
-       else{
-caretWidth=1;
-       }
+  
 
 caretWidth = 1;
 
@@ -2044,6 +2036,17 @@ $.each(dropdowns, function(i, item){
  $(item).next('.helper-element').html($(item).children('option:selected').val());
  var myWidth = $(item).next('.helper-element').width();
    
+
+
+
+ if(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+  $(item).css('fontSize','25px');
+  
+    caretWidth=1;      
+   }
+       else{
+caretWidth=1;
+       }
  $(item).css('width', ($(item).next('.helper-element').width() + caretWidth) + 'px');
  
 });

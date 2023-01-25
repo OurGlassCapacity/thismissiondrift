@@ -2006,7 +2006,7 @@ caretWidth=1;
 $(".dropdown").change(function () {
   if(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
   $(this).css('fontSize','28px');
-  if ($(this).next('.helper-element').width() < 20) caretWidth = 10;
+  if ($(this).next('.helper-element').width() < 20) caretWidth = 11;
   else if  ($(this).next('.helper-element').width() < 50) caretWidth = 9;
   else if  ($(this).next('.helper-element').width() < 100) caretWidth = 7;
   else if  ($(this).next('.helper-element').width() < 200) caretWidth = 6;

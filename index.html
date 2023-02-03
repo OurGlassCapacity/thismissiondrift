@@ -2002,14 +2002,8 @@ caretWidth=1;
 /*----- Define 'on change' function -----*/
 $(".dropdown").change(function () {
   if(iPhone/i.test(navigator.userAgent)){
-  // $(this).css('fontSize','28px');
-
-  if ($(this).next('.helper-element').width() < 10) caretWidth = 15;
-  else if  ($(this).next('.helper-element').width() < 50) caretWidth = 5;
-  else if  ($(this).next('.helper-element').width() < 100) caretWidth = 1;
-  else if  ($(this).next('.helper-element').width() < 150) caretWidth = 1;
-  else if  ($(this).next('.helper-element').width() < 300) caretWidth = 1;    
-  else {caretWidth=10;}
+  $(this).css('fontSize','25px');
+    caretWidth=20;
    }
        else{
 caretWidth=1;
@@ -2047,9 +2041,9 @@ $.each(dropdowns, function(i, item){
 
 
  if(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-  // $(item).css('fontSize','28px');
+  $(item).css('fontSize','25px');
   
-    caretWidth=10;    
+    caretWidth=20;    
    }
        else{
 caretWidth=1;

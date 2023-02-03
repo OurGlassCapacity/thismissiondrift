@@ -2001,13 +2001,14 @@ caretWidth=1;
 
 /*----- Define 'on change' function -----*/
 $(".dropdown").change(function () {
-  if(iPhone/i.test(navigator.userAgent)){
+  if(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
   $(this).css('fontSize','25px');
-    caretWidth=20;
+  
+    caretWidth=20;    
    }
        else{
 caretWidth=1;
-  }
+       }
 
        
 /*----- Assign selected value to its helper -----*/

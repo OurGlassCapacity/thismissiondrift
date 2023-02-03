@@ -2001,8 +2001,8 @@ caretWidth=1;
 
 /*----- Define 'on change' function -----*/
 $(".dropdown").change(function () {
-  if(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-  $(this).css('fontSize','28px');
+  if(iPhone/i.test(navigator.userAgent)){
+  // $(this).css('fontSize','28px');
 
   if ($(this).next('.helper-element').width() < 10) caretWidth = 15;
   else if  ($(this).next('.helper-element').width() < 50) caretWidth = 5;
@@ -2047,7 +2047,7 @@ $.each(dropdowns, function(i, item){
 
 
  if(/Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-  $(item).css('fontSize','28px');
+  // $(item).css('fontSize','28px');
   
     caretWidth=10;    
    }
